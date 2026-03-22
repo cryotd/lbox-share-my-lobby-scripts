@@ -5,6 +5,7 @@ The two python files allow you to register with the party sharing service. You f
 ```
 i:  SteamID32 in hexadecimals
 n:  in-game name to be displayed in other lmaobox user's lobby tab
+
 and 2 other fields which control the play style/lobby type indicators
 (numeric mappings for mvm,rage,casual,competitive), and lobby active player count, and the region of the host player.
 ```
