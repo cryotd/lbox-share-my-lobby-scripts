@@ -9,3 +9,4 @@ n:  in-game name to be displayed in other lmaobox user's lobby tab
 and 2 other fields which control the play style/lobby type indicators
 (numeric mappings for mvm,rage,casual,competitive), and lobby active player count, and the region of the host player.
 ```
+You can utilize it to load arbitrary profiles into share my lobby, and make it appear to other lmaobox premium users who make use of party sharing service. https://www.youtube.com/watch?v=OXlZCJM2m6I
