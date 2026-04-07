@@ -2,7 +2,7 @@ def encode(data: bytes) -> bytes:
     return bytes((~b) & 0xFF for b in data)
 
 def main():
-    key = "" // an internal ID seemingly derived from the password
+    key = "" // password
     u = "example@gmail.com" // email of customer with valid cheat license 
 
     i = input("Enter i: ")
