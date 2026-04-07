@@ -1,6 +1,5 @@
 # LMAOBOX Premium: Share My Lobby Scripts
 A collection of snippets for interacting with the lobby sharing backend of LMAOBOX Premium, a video game cheat for team fortress 2.
-Here is an experimental tracker making use of these snippets: https://drof.space/tf2-lmaobox-tracker/
 
 
 The two python files allow you to register with the party sharing service. You first need to construct a hex string based on a couple input parameters. 
