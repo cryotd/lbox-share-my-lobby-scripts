@@ -33,3 +33,44 @@ public async Task<List<CoordinatorRecord>?> FetchRecordsAsync(CancellationToken 
 
     return ParseRecords(decoded);
 }
+
+ private static byte[] DecodeLobbyTable(byte[] data)
+ {
+     var result = new byte[data.Length];
+
+     for (int i = 0; i < data.Length; i++)
+         result[i] = (byte)(~data[i] & 0xFF);
+
+     return result;
+ }
+
+ private static int ToIntSafe(string value)
+ {
+     return int.TryParse(value, out var result) ? result : 0;
+ }
+
+ private static List<CoordinatorRecord> ParseRecords(string decoded)
+ {
+     var fields = decoded.Split(';', StringSplitOptions.None);
+
+     var cleaned = fields
+         .Select(f => f.Trim())
+         .Where(f => !string.IsNullOrEmpty(f))
+         .ToList();
+
+     var records = new List<CoordinatorRecord>();
+
+     for (int i = 0; i <= cleaned.Count - 5; i += 5)
+     {
+         records.Add(new CoordinatorRecord
+         {
+             CoordinatorId = cleaned[i],
+             PartyMembersPresent = ToIntSafe(cleaned[i + 1]),
+             LobbyType = LobbyType2Str(cleaned[i + 2]),
+             PlayerRegion = cleaned[i + 3],
+             PlayerName = cleaned[i + 4]
+         });
+     }
+
+     return records;
+ }
