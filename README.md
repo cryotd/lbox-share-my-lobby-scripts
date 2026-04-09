@@ -1,6 +1,12 @@
 # LMAOBOX Premium: Share My Lobby Scripts
 A collection of snippets for interacting with the lobby sharing backend of LMAOBOX Premium, a video game cheat for team fortress 2.
 
+Example output you can receive from lmaobox.net/sl/v:
+```
+7150b2f;4;1;eu;wesley; 2da5ef41;2;2;eu;xiong liqin baws; 66165030;1;1;eu;pikio;
+```
+Try it out [here](https://drof.space/tnv1a/lbox-share-my-lobby.php)
+
 
 The two python files allow you to register with the party sharing service. You first need to construct a hex string based on a couple input parameters. 
 ```
