@@ -1,5 +1,6 @@
 # LMAOBOX Premium: Share My Lobby Scripts
 A collection of snippets for interacting with the lobby sharing backend of LMAOBOX Premium, a video game cheat for team fortress 2.
+For more details, check out my [post](https://blog.drof.space/2026/04/07/lmaobox-premium-https-api-analysis/) about it.
 
 Example output you can receive from lmaobox.net/sl/v:
 ```
