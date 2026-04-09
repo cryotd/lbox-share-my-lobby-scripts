@@ -1,6 +1,6 @@
 public sealed class CoordinatorRecord
 {
-    public string CoordinatorId { get; set; } = "";
+    public string CoordinatorId { get; set; } = ""; // Steam32-UID encoded in hex
     public int PartyMembersPresent { get; set; }
     public LobbyType LobbyType { get; set; }
     public string PlayerRegion { get; set; } = "";
