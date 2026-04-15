@@ -12,7 +12,11 @@ public async Task<List<CoordinatorRecord>?> FetchRecordsAsync(CancellationToken 
     byte[] vecData =
     {
        // insert your extracted identity provider here. you can get it by taking a look at the cheat module lmaobox injects into the game.
-       // it's simply a bitwise NOT performed on (customer email+customer full password) and then bitwise NOT on all of that.
+       // 1
+//Raw formatted buffer: i=47A2BE&amp;u=lboxuser@gmail.com
+//u = customer email address
+//i = some hardcoded string within the cheat payload (could be user identity related and embedded by their custom pipeline, no idea)
+// perform a Bitwise NOT transform on this buffer, and boom you got your authentication data.
     };
 
     byte[]? vecResponse = await PostBinaryAsync(
